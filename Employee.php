@@ -12,10 +12,15 @@ abstract class Employee extends Person
         $this->company = $company;
     }
 
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
     abstract public function earning();
 
     public function __toString()
     {
-        return parent::__toString() . ", Company: {$this->company}, Earnings: " . number_format($this->earning(), 2);
+        return parent::__toString() . "\n Company: {$this->company} \nEarnings: " . number_format($this->earning(), 2);
     }
 }

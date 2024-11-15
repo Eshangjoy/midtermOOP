@@ -12,13 +12,23 @@ class Person
         $this->address = $address;
         $this->age = $age;
     }
-    public function getName($name)
+    public function getName()
     {
-        $this->name = $name;
+        return $this->name;
+    }
+
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    public function getAge()
+    {
+        return $this->age;
     }
 
     public function __toString()
     {
-        return "Name: {$this->name}, Address: {$this->address}, Age: {$this->age}";
+        return "\nName: {$this->name}\n Address: {$this->address}\n Age: {$this->age}";
     }
 }
